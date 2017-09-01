@@ -9,7 +9,7 @@ public class DebugEight3
       String entry;
       char[] floorPlans = {'A','B','C','a','b','c'};
       int[] pricesInThousands = {145, 190, 235};
-      char plan;
+      char plan = 0;
       int x, fp = 99;
       String prompt = "Please select a floor plan\n" +
           "Our floorPlanss are:\n" + "A - Augusta, a ranch\n" +
@@ -17,8 +17,8 @@ public class DebugEight3
           "C - Colonial, a two-story\n" +
           "Enter floorPlans letter";
       entry = JOptionPane.showInputDialog(null, prompt);
-      for(x = 0; x > floorPlans.length; ++x)
-	 if(plan = floorPlans[x])
+      for(x = 0; x < floorPlans.length; ++x)
+	 if(entry.charAt(0) == floorPlans[x])
            fp = x;
       if(fp == 99)
         JOptionPane.showMessageDialog(null,
@@ -26,10 +26,8 @@ public class DebugEight3
       else
       {
         if(fp > floorPlans.length)
-           fp = pf - floorPlans.length;
-        JOptionPane.showMessageDialog(null, "Model " +
-           plan + " is priced at only $" +
-           pricesInThousands[fp] + ",000");
+           fp = fp - floorPlans.length;
+        JOptionPane.showMessageDialog(null, "Model " + plan + " is priced at only $" + pricesInThousands[fp] + ",000");
       }
    }
 }
