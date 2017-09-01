@@ -18,7 +18,8 @@ public class DistanceFromAverage {
         int sum = 0;
         for (int i = 0; i<enteredNums.size(); i++){
             sum += enteredNums.get(i);
+            System.out.println("Average is: " + sum/enteredNums.size());
+            System.out.println("Distance from is: " + (enteredNums.get(i) - (sum/enteredNums.size())));
         }
-        System.out.println(sum/enteredNums.size());
     }
 }
